@@ -48,7 +48,7 @@
 
 @media (max-width: 500px) {
     .login-container {
-        padding: 0.25rem; /* Reduza o espaçamento para maximizar o espaço disponível */
+        padding: 0.25rem;
 
     }
     .box-login-container{

@@ -1,12 +1,10 @@
-import React from "react";
-import { Box, Button, TextField, Typography } from "@mui/material";
-import logo from "../../assets/image.png";
-import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
 import "./Login.css";
+import React from "react";
+import logo from "../../assets/image.png";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
 
 export const Login: React.FC = () => {
-  // Você pode adicionar aqui o estado e as funções, com tipos explícitos se necessário.
-
   return (
     <Box className="box-main">
       <MenuHeader />
