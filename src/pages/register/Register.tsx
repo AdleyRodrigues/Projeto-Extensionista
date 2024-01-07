@@ -1,12 +1,12 @@
 import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
 
-const Ranking = () => {
+const Register = () => {
   return (
     <div>
       <MenuHeader />
-      <h1>Ranking</h1>
+      <h1>Register</h1>
     </div>
   );
 };
 
-export default Ranking;
+export default Register;
