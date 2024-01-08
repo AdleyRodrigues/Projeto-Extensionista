@@ -28,6 +28,17 @@
     width: 100%; 
     margin-bottom: 1rem;
 }
+
+.login-button{
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    margin-top: 20px;
+    text-align: center;
+    color: #666; 
+    font-size: 12px;
+  }
   
 @media (max-width: 375px) {
     .login-container {

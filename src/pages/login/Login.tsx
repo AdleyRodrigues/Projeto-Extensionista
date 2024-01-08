@@ -34,14 +34,7 @@ export const Login: React.FC = () => {
         <Button className="login-button" variant="contained">
           ENTRAR
         </Button>
-        <Typography
-          sx={{
-            marginTop: "20px",
-            textAlign: "center",
-            color: "text.secondary",
-            fontSize: "12px",
-          }}
-        >
+        <Typography className="footer-text">
           Ainda não possui login?{" "}
           <a href="/register" style={{ color: "#8A2BE2" }}>
             Cadastre-se aqui.
