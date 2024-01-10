@@ -19,7 +19,9 @@ const About = () => {
         <Typography variant="body1" className="content-text">
           <strong>Criadores -</strong>
           <br />
-          ---
+          --- 
+          Elias José Galeazzi 
+          
         </Typography>
         <br />
         <Typography variant="body1" className="content-text">
