@@ -21,6 +21,8 @@ const About = () => {
           <br />
           --- 
           Elias José Galeazzi 
+          Maysa Flores Cardoso
+          Adley Rodrigues
           
         </Typography>
         <br />
