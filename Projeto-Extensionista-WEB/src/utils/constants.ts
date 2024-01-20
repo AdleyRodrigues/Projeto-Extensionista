@@ -60,3 +60,10 @@ export const bookInfo = [
     text: "PDF/Livro físico",
   },
 ];
+
+export const ranking = [
+  { class: "3º A", score: "2.350" },
+  { class: "5º C", score: "2.090" },
+  { class: "4º D", score: "1.680" },
+  { class: "1º B", score: "1.071" },
+];

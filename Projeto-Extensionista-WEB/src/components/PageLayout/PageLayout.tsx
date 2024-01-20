@@ -5,14 +5,14 @@ import { ReactNode } from "react";
 
 interface PageLayoutProps {
   children?: ReactNode;
-  sx?: SxProps<Theme>;
+  gap?: string;
 }
 
-export const PageLayout = ({ children, sx }: PageLayoutProps) => {
+export const PageLayout = ({ children, gap }: PageLayoutProps) => {
   return (
     <Box sx={sxStyle.mainBox}>
       <MenuHeader />
-      <Box sx={sxStyle.children}>{children}</Box>
+      <Box sx={{ gap: { gap }, ...sxStyle.children }}>{children}</Box>
     </Box>
   );
 };
