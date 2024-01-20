@@ -1,14 +1,12 @@
 import React from "react";
 import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
 import logo from "../../assets/image.png";
-import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
-import "./Register.css";
+import { sxStyle } from "./Register.style";
 
 export const Register: React.FC = () => {
   return (
-    <Box className="box-main">
-      <MenuHeader />
-      <Box className="box-login-container">
+    <Box sx={sxStyle.boxMain}>
+      <Box sx={sxStyle.boxLoginContainer}>
         <img
           src={logo}
           alt="Logo"
@@ -17,54 +15,54 @@ export const Register: React.FC = () => {
         <Typography variant="h4" sx={{ margin: "20px 0", textAlign: "center" }}>
           Cadastro
         </Typography>
-        <Box className="login-container">
+        <Box sx={sxStyle.loginContainer}>
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Nome completo"
             variant="outlined"
           />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Data de nascimento"
             variant="outlined"
           />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Nome da mãe"
             variant="outlined"
           />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Cidade"
             variant="outlined"
           />
-          <TextField className="input-field" label="UF" variant="outlined" />
+          <TextField sx={sxStyle.inputField} label="UF" variant="outlined" />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Escola"
             variant="outlined"
             select
           >
             <MenuItem value="">Selecione uma escola</MenuItem>
-            <MenuItem value="escola1">Escola 1</MenuItem>
-            <MenuItem value="escola2">Escola 2</MenuItem>
-            <MenuItem value="escola3">Escola 3</MenuItem>
+            <MenuItem value="escola1">Ari de Sá Cavalcante</MenuItem>
+            <MenuItem value="escola2">Farias Brito</MenuItem>
+            <MenuItem value="escola3">Piamarta Aguanambi</MenuItem>
           </TextField>
-          <TextField className="input-field" label="Turma" variant="outlined" />
+          <TextField sx={sxStyle.inputField} label="Turma" variant="outlined" />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Email"
             type="email"
             variant="outlined"
           />
           <TextField
-            className="input-field"
+            sx={sxStyle.inputField}
             label="Senha"
             type="password"
             variant="outlined"
           />
         </Box>
-        <Button className="login-button" variant="contained">
+        <Button sx={sxStyle.loginButton} variant="contained">
           CADASTRAR
         </Button>
         <Typography

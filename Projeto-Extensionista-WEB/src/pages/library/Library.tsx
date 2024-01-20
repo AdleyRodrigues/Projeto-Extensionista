@@ -1,12 +1,9 @@
-import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
+import { PageLayout } from "../../components/PageLayout/PageLayout";
 
-const Library = () => {
+export const Library = () => {
   return (
-    <div>
-      <MenuHeader />
+    <PageLayout>
       <h1>library</h1>
-    </div>
+    </PageLayout>
   );
 };
-
-export default Library;

@@ -1,12 +1,9 @@
-import { MenuHeader } from "../../components/MenuHeader/MenuHeader";
+import { PageLayout } from "../../components/PageLayout/PageLayout";
 
-const Ranking = () => {
+export const Ranking = () => {
   return (
-    <div>
-      <MenuHeader />
+    <PageLayout>
       <h1>Ranking</h1>
-    </div>
+    </PageLayout>
   );
 };
-
-export default Ranking;

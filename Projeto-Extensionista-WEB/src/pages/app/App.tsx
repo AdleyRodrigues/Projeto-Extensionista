@@ -1,13 +1,12 @@
-//import "./App.css";
-import About from "../about/About";
+import { About } from "../about/About";
 import { Login } from "../login/Login";
-import Library from "../library/Library";
-import Ranking from "../ranking/Ranking";
-import Participate from "../participate/Participate";
+import { Library } from "../library/Library";
+import { Ranking } from "../ranking/Ranking";
+import { Participate } from "../participate/Participate";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Register from "../register/Register";
 
-const App = () => {
+export const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -21,5 +20,3 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
-export default App;
