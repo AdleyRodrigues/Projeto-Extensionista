@@ -4,8 +4,24 @@ import { ReactNode } from "react";
 
 interface CardRootProps {
   children?: ReactNode;
+  maxWidth?: string;
+  flexDirection?: "row" | "column";
 }
 
-export const CardRoot = ({ children }: CardRootProps) => {
-  return <Box sx={sxStyle.card}>{children} </Box>;
+export const CardRoot = ({
+  children,
+  maxWidth,
+  flexDirection,
+}: CardRootProps) => {
+  return (
+    <Box
+      sx={{ 
+        flexDirection: { flexDirection },
+        maxWidth: { maxWidth },
+        ...sxStyle.card,
+      }}
+    >
+      {children}
+    </Box>
+  );
 };

@@ -5,4 +5,11 @@ export const sxStyle = makeSxStyles({
     width: "100%",
     minHeight: "100vh",
   },
+  children: {
+    minHeight: "calc(100vh - 7.801rem)",
+    padding: "2rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent : "center",
+  },
 });

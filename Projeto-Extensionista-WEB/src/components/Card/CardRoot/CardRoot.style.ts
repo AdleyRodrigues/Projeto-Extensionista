@@ -5,9 +5,9 @@ export const sxStyle = makeSxStyles({
   card: {
     width: "100%",
     display: "flex",
-    maxWidth: "18rem",
+    // maxWidth: "18rem",
     alignItems: "center",
-    flexDirection: "column",
+    // flexDirection: "column",
     justifyContent: "center",
     margin: "auto",
     gap: "1.25rem",

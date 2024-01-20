@@ -4,7 +4,6 @@ import { colors } from "../../config/theme";
 export const sxStyle = makeSxStyles({
   boxMain: {
     width: "100%",
-    minHeight: "calc(100vh - 60.81px)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -43,5 +42,6 @@ export const sxStyle = makeSxStyles({
     width: "100%",
     maxWidth: "5rem",
     height: "auto",
+    cursor: "pointer",
   },
 });

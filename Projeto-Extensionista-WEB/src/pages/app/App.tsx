@@ -5,6 +5,7 @@ import { Ranking } from "../ranking/Ranking";
 import { Participate } from "../participate/Participate";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Register } from "../register/Register";
+import { bookDetails } from "../bookDetails/bookDetails";
 
 export const App = () => {
   return (
@@ -16,7 +17,7 @@ export const App = () => {
         <Route path="/participate" Component={Participate} />
         <Route path="/ranking" Component={Ranking} />
         <Route path="/register" Component={Register} />
-        <Route path="/book-details" Component={Register} />
+        <Route path="/book-details" Component={bookDetails} />
       </Routes>
     </BrowserRouter>
   );

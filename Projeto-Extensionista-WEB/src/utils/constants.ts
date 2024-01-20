@@ -33,3 +33,30 @@ export const states = [
   { label: "Sergipe", value: "SE" },
   { label: "Tocantins", value: "TO" },
 ];
+
+export const bookInfo = [
+  {
+    subTile: "TÍTULO",
+    text: "Código limpo: habilidades práticas do Agile software",
+  },
+  {
+    subTile: "AUTOR",
+    text: "Robert C. Martin",
+  },
+  {
+    subTile: "PÁGINAS",
+    text: "425",
+  },
+  {
+    subTile: "IDADE DE LEITURA",
+    text: "16 >",
+  },
+  {
+    subTile: "QTD. RECICLÁVEIS NECESSÁRIOS",
+    text: "10 a 20",
+  },
+  {
+    subTile: "DISPONÍVEL EM",
+    text: "PDF/Livro físico",
+  },
+];

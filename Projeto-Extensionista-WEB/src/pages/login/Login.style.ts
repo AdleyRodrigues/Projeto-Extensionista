@@ -37,7 +37,6 @@ export const sxStyle = makeSxStyles({
     width: "100%",
   },
   footerText: {
-    fontFamily: "Roboto, sans-serif",
     textAlign: "center",
     color: "#666",
     fontSize: 12,
