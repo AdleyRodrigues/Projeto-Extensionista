@@ -14,12 +14,8 @@ export const Login: React.FC = () => {
   return (
     <Box sx={sxStyle.boxMain}>
       <Box sx={sxStyle.boxLoginContainer}>
-        <img
-          src={logo}
-          alt="Logo"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
-        <Typography variant="h4" sx={{ margin: "20px 0", textAlign: "center" }}>
+        <Box component="img" src={logo} alt="Logo" sx={sxStyle.logo} />
+        <Typography variant="h4" textAlign="center">
           Login
         </Typography>
         <Box sx={sxStyle.loginContainer}>
@@ -36,19 +32,15 @@ export const Login: React.FC = () => {
             variant="outlined"
           />
         </Box>
-        <Button
-          sx={sxStyle.loginButton}
-          variant="contained"
-          onClick={handleClick("/library")}
-        >
+        <Button variant="contained" onClick={handleClick("/library")}>
           ENTRAR
         </Button>
-        <Typography sx={sxStyle.footerText}>
+        <Box sx={sxStyle.footerText}>
           Ainda não possui login?{" "}
-          <a href="/register" style={{ color: "#8A2BE2" }}>
+          <Box component="a" href="/register" color="#8A2BE2">
             Cadastre-se aqui.
-          </a>
-        </Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

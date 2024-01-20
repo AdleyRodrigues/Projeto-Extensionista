@@ -4,11 +4,20 @@ export const sxStyle = makeSxStyles({
   mainBox: {
     display: "flex",
     width: "100%",
-    justifyContent: "space-between",
     alignItems: "center",
-    padding: "10px 20px",
+    justifyContent: "space-between",
+    padding: "0.5rem 3rem",
     backgroundColor: "#f0f0f0",
     borderBottom: "1px solid #ccc",
     boxSizing: "border-box",
+  },
+  logo: {
+    width: "100%",
+    maxWidth: "4rem",
+    height: "auto",
+  },
+  links: {
+    display: "flex",
+    gap: "1.25rem"
   },
 });

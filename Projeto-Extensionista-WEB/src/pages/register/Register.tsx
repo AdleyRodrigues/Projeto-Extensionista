@@ -2,16 +2,20 @@ import React from "react";
 import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
 import logo from "../../assets/image.png";
 import { sxStyle } from "./Register.style";
+import { schools, states } from "../../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 export const Register: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (path: string) => () => {
+    navigate(path);
+  };
+
   return (
     <Box sx={sxStyle.boxMain}>
       <Box sx={sxStyle.boxLoginContainer}>
-        <img
-          src={logo}
-          alt="Logo"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+        <Box component="img" src={logo} alt="Logo" sx={sxStyle.logo} />
         <Typography variant="h4" sx={{ margin: "20px 0", textAlign: "center" }}>
           Cadastro
         </Typography>
@@ -36,17 +40,29 @@ export const Register: React.FC = () => {
             label="Cidade"
             variant="outlined"
           />
-          <TextField sx={sxStyle.inputField} label="UF" variant="outlined" />
+          <TextField
+            sx={sxStyle.inputField}
+            label="UF"
+            variant="outlined"
+            select
+          >
+            {states.map((state) => (
+              <MenuItem key={state.value} value={state.value}>
+                {state.label}
+              </MenuItem>
+            ))}
+          </TextField>
           <TextField
             sx={sxStyle.inputField}
             label="Escola"
             variant="outlined"
             select
           >
-            <MenuItem value="">Selecione uma escola</MenuItem>
-            <MenuItem value="escola1">Ari de Sá Cavalcante</MenuItem>
-            <MenuItem value="escola2">Farias Brito</MenuItem>
-            <MenuItem value="escola3">Piamarta Aguanambi</MenuItem>
+            {schools.map((school) => (
+              <MenuItem key={school.value} value={school.value}>
+                {school.label}
+              </MenuItem>
+            ))}
           </TextField>
           <TextField sx={sxStyle.inputField} label="Turma" variant="outlined" />
           <TextField
@@ -62,25 +78,16 @@ export const Register: React.FC = () => {
             variant="outlined"
           />
         </Box>
-        <Button sx={sxStyle.loginButton} variant="contained">
+        <Button variant="contained" onClick={handleClick("/")}>
           CADASTRAR
         </Button>
-        <Typography
-          sx={{
-            marginTop: "20px",
-            textAlign: "center",
-            color: "text.secondary",
-            fontSize: "12px",
-          }}
-        >
+        <Box sx={sxStyle.footerText}>
           Já possui uma conta?{" "}
-          <a href="/" style={{ color: "#8A2BE2" }}>
+          <Box component="a" href="/" color="#8A2BE2">
             Entre aqui.
-          </a>
-        </Typography>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
 };
-
-export default Register;
