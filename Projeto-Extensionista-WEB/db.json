@@ -1,28 +1,138 @@
 {
   "users": [
     {
-      "id": "211f",
-      "email": "lucasroliveira19@outlook.com",
-      "password": "Lovea1b2j3140803",
+      "id": "88b7",
       "fullName": "Lucas Rodrigues",
       "birthDate": "19/11/2000",
       "motherName": "Maria da Silva",
       "city": "Fortaleza",
       "birthState": "CE",
       "school": "escola2",
-      "class": "2º A"
+      "class": "2º A",
+      "email": "lararoque2003@hotmail.com",
+      "password": "Lovea1b2j3140803"
+    }
+  ],
+  "books": [
+    {
+      "id": "1",
+      "title": "Código limpo: habilidades práticas do Agile software",
+      "author": "Robert C. Martin",
+      "pages": 425,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "PDF/Livro físico",
+      "img": "src/assets/clean-code.png"
     },
     {
-      "id": "3e98",
-      "fullName": "Lionel Messi",
-      "password": "messi",
-      "birthDate": "03/05/1965",
-      "motherName": "Maria Messi",
-      "city": "Russas",
-      "birthState": "CE",
-      "school": "escola3",
-      "class": "3º A",
-      "email": "messi@user.com"
+      "id": "2",
+      "title": "Algoritmos para viver: A ciência exata das decisões humanas",
+      "author": "Brian Christian e Tom Griffiths",
+      "pages": 400,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "3",
+      "title": "Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes",
+      "author": "Gustavo Guanabara",
+      "pages": 350,
+      "reading-age": "12+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "4",
+      "title": "Algoritmos: Teoria e Prática",
+      "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald Rivest, Clifford Stein",
+      "pages": 1.322,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "5",
+      "title": "Refatoração: Aperfeiçoando o Design de Códigos Existentes",
+      "author": "Martin Fowler",
+      "pages": 480,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "6",
+      "title": "Domain-driven design: atacando as complexidades no coração do software",
+      "author": "Eric Evans",
+      "pages": 512,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "7",
+      "title": "Arquitetura Limpa",
+      "author": "Robert C. Martin",
+      "pages": 368,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "8",
+      "title": "O Programador Pragmático: De Aprendiz a Mestre",
+      "author": "Dave Thomas e Andrew Hunt",
+      "pages": 480,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "9",
+      "title": "Padrões de Projeto - Soluções Reutilizaveis de Software Orientado a Objetos",
+      "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "pages": 496,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "10",
+      "title": "Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos",
+      "author": "Aditya Y. Bhargava",
+      "pages": 256,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "11",
+      "title": "The Mythical Man-Month",
+      "author": "Fred Brooks",
+      "pages": 384,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
+    },
+    {
+      "id": "12",
+      "title": "Use a Cabeça! Padrões de Projetos",
+      "author": "Kathy Sierra e Bert Bates",
+      "pages": 320,
+      "reading-age": "16+",
+      "quantity-recyclables-needed": "10 a 20",
+      "format": "Livro físico",
+      "img": "src/assets/clean-code.png"
     }
   ]
 }

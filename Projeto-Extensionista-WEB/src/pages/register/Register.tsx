@@ -6,6 +6,7 @@ import { schools, states } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { formData } from "../../utils/interface";
 import { FormDataProps } from "../../utils/types";
+import { createPost } from "../../services/api";
 
 export const Register: React.FC = () => {
   const navigate = useNavigate();
@@ -34,22 +35,7 @@ export const Register: React.FC = () => {
 
   const onSubmit = () => {
     createPost(form);
-  };
-
-  const createPost = (form: formData) => {
-    fetch("http://localhost:5000/users", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(form),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        navigate("/");
-      })
-      .catch((err) => console.log(err));
+    navigate("/");
   };
 
   return (

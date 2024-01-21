@@ -34,30 +34,18 @@ export const states = [
   { id: 26, label: "Tocantins", value: "TO" },
 ];
 
-export const bookInfo = [
+export const sessionTitle = [
   {
-    subTile: "TÍTULO",
-    text: "Código limpo: habilidades práticas do Agile software",
+    title: "10 - 20 recicláveis",
   },
   {
-    subTile: "AUTOR",
-    text: "Robert C. Martin",
+    title: "60 - 80 recicláveis",
   },
   {
-    subTile: "PÁGINAS",
-    text: "425",
+    title: "30 - 50 recicláveis",
   },
   {
-    subTile: "IDADE DE LEITURA",
-    text: "16 >",
-  },
-  {
-    subTile: "QTD. RECICLÁVEIS NECESSÁRIOS",
-    text: "10 a 20",
-  },
-  {
-    subTile: "DISPONÍVEL EM",
-    text: "PDF/Livro físico",
+    title: "100 - 200+ recicláveis",
   },
 ];
 

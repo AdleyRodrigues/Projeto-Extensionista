@@ -9,3 +9,14 @@ export interface formData {
   email: string;
   password: string;
 }
+
+export interface IBook {
+  id: number;
+  title?: string;
+  author?: string;
+  pages?: number;
+  readingAge?: string;
+  quantityRecyclablesNeeded?: string;
+  format?: string;
+  img?: string;
+}

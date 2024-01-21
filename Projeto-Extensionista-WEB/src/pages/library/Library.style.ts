@@ -8,6 +8,7 @@ export const sxStyle = makeSxStyles({
     alignItems: "center",
     justifyContent: "center",
     gap: "2rem",
+    flexDirection: "column",
   },
   container: {
     display: "flex",
@@ -32,16 +33,21 @@ export const sxStyle = makeSxStyles({
     fontSize: "0.875rem",
     fontWeight: 500,
     color: colors.neutralLowDark,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
   },
   books: {
     display: "flex",
     gap: "1.25rem",
     overflowX: "auto",
+    border: "1px solid red",
   },
-  logo: {
+  cover: {
     width: "100%",
     maxWidth: "5rem",
     height: "auto",
     cursor: "pointer",
+    placeSelf: "center",
   },
 });
