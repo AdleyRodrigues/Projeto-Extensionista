@@ -1,15 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
 import logo from "../../assets/image.png";
 import { sxStyle } from "./Register.style";
 import { schools, states } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
+import { formData } from "../../utils/interface";
+import { FormDataProps } from "../../utils/types";
 
 export const Register: React.FC = () => {
   const navigate = useNavigate();
+  const [form, setForm] = useState<formData>({
+    fullName: "",
+    birthDate: "",
+    motherName: "",
+    city: "",
+    birthState: "",
+    school: "",
+    class: "",
+    email: "",
+    password: "",
+  });
 
-  const handleClick = (path: string) => () => {
-    navigate(path);
+  const handleInputChange = (key: FormDataProps, value: string) => {
+    setForm({ ...form, [key]: value });
+  };
+
+  const handleTextFieldChange: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (event) => {
+    const { name, value } = event.target;
+    handleInputChange(name as FormDataProps, value);
+  };
+
+  const onSubmit = () => {
+    createPost(form);
+  };
+
+  const createPost = (form: formData) => {
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(form),
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+        navigate("/");
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -21,41 +61,59 @@ export const Register: React.FC = () => {
         </Typography>
         <Box sx={sxStyle.loginContainer}>
           <TextField
-            sx={sxStyle.inputField}
+            name="fullName"
             label="Nome completo"
             variant="outlined"
+            value={form.fullName || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
           />
           <TextField
-            sx={sxStyle.inputField}
+            name="birthDate"
             label="Data de nascimento"
             variant="outlined"
+            sx={sxStyle.inputField}
+            value={form.birthDate || ""}
+            onChange={handleTextFieldChange}
           />
           <TextField
-            sx={sxStyle.inputField}
+            name="motherName"
             label="Nome da mãe"
             variant="outlined"
+            sx={sxStyle.inputField}
+            value={form.motherName || ""}
+            onChange={handleTextFieldChange}
           />
           <TextField
-            sx={sxStyle.inputField}
+            name="city"
             label="Cidade"
             variant="outlined"
+            value={form.city || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
           />
           <TextField
-            sx={sxStyle.inputField}
+            name="birthState"
             label="UF"
             variant="outlined"
+            value={form.birthState || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
             select
           >
             {states.map((state) => (
-              <MenuItem key={state.value} value={state.value}>
+              <MenuItem key={state.id} value={state.value}>
                 {state.label}
               </MenuItem>
             ))}
           </TextField>
           <TextField
-            sx={sxStyle.inputField}
+            name="school"
             label="Escola"
             variant="outlined"
+            value={form.school || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
             select
           >
             {schools.map((school) => (
@@ -64,21 +122,33 @@ export const Register: React.FC = () => {
               </MenuItem>
             ))}
           </TextField>
-          <TextField sx={sxStyle.inputField} label="Turma" variant="outlined" />
           <TextField
-            sx={sxStyle.inputField}
-            label="Email"
-            type="email"
+            name="class"
+            label="Turma"
             variant="outlined"
+            value={form.class || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
           />
           <TextField
+            name="email"
+            label="Email"
+            variant="outlined"
             sx={sxStyle.inputField}
+            value={form.email || ""}
+            onChange={handleTextFieldChange}
+          />
+          <TextField
+            name="password"
             label="Senha"
             type="password"
             variant="outlined"
+            value={form.password || ""}
+            sx={sxStyle.inputField}
+            onChange={handleTextFieldChange}
           />
         </Box>
-        <Button variant="contained" onClick={handleClick("/")}>
+        <Button variant="contained" onClick={onSubmit}>
           CADASTRAR
         </Button>
         <Box sx={sxStyle.footerText}>

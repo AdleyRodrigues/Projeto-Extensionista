@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "211f",
+      "email": "lucasroliveira19@outlook.com",
+      "password": "Lovea1b2j3140803",
+      "fullName": "Lucas Rodrigues",
+      "birthDate": "19/11/2000",
+      "motherName": "Maria da Silva",
+      "city": "Fortaleza",
+      "birthState": "CE",
+      "school": "escola2",
+      "class": "2º A"
+    },
+    {
+      "id": "3e98",
+      "fullName": "Lionel Messi",
+      "password": "messi",
+      "birthDate": "03/05/1965",
+      "motherName": "Maria Messi",
+      "city": "Russas",
+      "birthState": "CE",
+      "school": "escola3",
+      "class": "3º A",
+      "email": "messi@user.com"
+    }
+  ]
+}
