@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Box, Button, MenuItem, TextField, Typography } from "@mui/material";
-import logo from "../../assets/image.png";
+import logo from "../../assets/logo.png";
 import { sxStyle } from "./Register.style";
 import { schools, states } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
-import { formData } from "../../utils/interface";
+import { IFormData } from "../../utils/interface";
 import { FormDataProps } from "../../utils/types";
-import { createPost } from "../../services/api";
+import { createUser } from "../../services/api";
 
 export const Register: React.FC = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState<formData>({
+  const [form, setForm] = useState<IFormData>({
     fullName: "",
     birthDate: "",
     motherName: "",
@@ -34,7 +34,7 @@ export const Register: React.FC = () => {
   };
 
   const onSubmit = () => {
-    createPost(form);
+    createUser(form);
     navigate("/");
   };
 
@@ -103,7 +103,7 @@ export const Register: React.FC = () => {
             select
           >
             {schools.map((school) => (
-              <MenuItem key={school.value} value={school.value}>
+              <MenuItem key={school.id} value={school.value}>
                 {school.label}
               </MenuItem>
             ))}

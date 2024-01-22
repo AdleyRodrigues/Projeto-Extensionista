@@ -16,13 +16,16 @@ export const sxStyle = makeSxStyles({
   bookInfo: {
     display: "flex",
     flexDirection: "column",
-    gap: "1rem"
+    gap: "1rem",
   },
   subTitle: {
+    fontSize: "0.875rem",
     fontWeight: 500,
-    color: colors.neutralLowDark
+    color: colors.neutralLowDark,
   },
   text: {
-    color: colors.gray
-  }
+    fontSize: "0.875rem",
+
+    color: colors.gray,
+  },
 });

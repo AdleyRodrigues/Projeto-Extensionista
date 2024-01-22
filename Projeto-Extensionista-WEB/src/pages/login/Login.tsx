@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/image.png";
+import logo from "../../assets/logo.png";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { sxStyle } from "./Login.style";
 import { useNavigate } from "react-router-dom";

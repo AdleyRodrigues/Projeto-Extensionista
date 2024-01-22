@@ -8,3 +8,5 @@ export type FormDataProps =
   | "class"
   | "email"
   | "password";
+
+export type FilterDataProps = "city" | "school" | "class";

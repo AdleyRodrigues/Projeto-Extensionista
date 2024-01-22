@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { sxStyle } from "./MenuHeader.style";
-import logo from "../../assets/image.png";
+import logo from "../../assets/logo.png";
 
 export const MenuHeader: React.FC = () => {
   const navigate = useNavigate();

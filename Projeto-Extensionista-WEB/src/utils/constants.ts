@@ -1,7 +1,9 @@
+import { BookInfoItem, IBook } from "./interface";
+
 export const schools = [
-  { label: "Ari de Sá Cavalcante", value: "escola1" },
-  { label: "Farias Brito", value: "escola2" },
-  { label: "Piamarta Aguanambi", value: "escola3" },
+  { id: 1, label: "Ari de Sá Cavalcante", value: "escola1" },
+  { id: 2, label: "Farias Brito", value: "escola2" },
+  { id: 3, label: "Piamarta Aguanambi", value: "escola3" },
 ];
 
 export const states = [
@@ -34,24 +36,42 @@ export const states = [
   { id: 26, label: "Tocantins", value: "TO" },
 ];
 
-export const sessionTitle = [
-  {
-    title: "10 - 20 recicláveis",
-  },
-  {
-    title: "60 - 80 recicláveis",
-  },
-  {
-    title: "30 - 50 recicláveis",
-  },
-  {
-    title: "100 - 200+ recicláveis",
-  },
+export const ranking = [
+  { id: 1, city: "Fortaleza", class: "1º A", score: "2.350" },
+  { id: 3, city: "Crateús", class: "2º A", score: "1.680" },
+  { id: 4, city: "Russas", class: "3º A", score: "1.071" },
 ];
 
-export const ranking = [
-  { class: "3º A", score: "2.350" },
-  { class: "5º C", score: "2.090" },
-  { class: "4º D", score: "1.680" },
-  { class: "1º B", score: "1.071" },
+export const tHead = [
+  { id: 1, name: "Cidade" },
+  { id: 2, name: "Turma" },
+  { id: 3, name: "Pontuação" },
 ];
+
+export const bookInfo: BookInfoItem[] = [
+  { id: 1, subTile: "TÍTULO", text: "{title}" },
+  { id: 2, subTile: "AUTOR", text: "{author}" },
+  { id: 3, subTile: "PÁGINAS", text: "{pages}" },
+  { id: 4, subTile: "IDADE DE LEITURA", text: "{readingAge}" },
+  {
+    id: 5,
+    subTile: "QTD. RECICLÁVEIS NECESSÁRIOS",
+    text: "{quantityRecyclablesNeeded}",
+  },
+  { id: 6, subTile: "DISPONÍVEL EM", text: "{format}" },
+];
+
+export const variableMap: Record<string, keyof IBook> = {
+  "{title}": "title",
+  "{author}": "author",
+  "{pages}": "pages",
+  "{readingAge}": "readingAge",
+  "{quantityRecyclablesNeeded}": "quantityRecyclablesNeeded",
+  "{format}": "format",
+};
+
+export const groupBooksInThrees = (books: IBook[]) => {
+  return Array.from({ length: Math.ceil(books.length / 3) }, (_, index) =>
+    books.slice(index * 3, index * 3 + 3)
+  );
+};

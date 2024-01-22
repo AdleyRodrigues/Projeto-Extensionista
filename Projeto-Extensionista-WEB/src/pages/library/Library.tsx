@@ -4,8 +4,9 @@ import { sxStyle } from "./Library.style";
 import { CardRoot } from "../../components/Card/CardRoot/CardRoot";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { fetchBooks } from "../../services/api";
+import { getBooks } from "../../services/api";
 import { IBook } from "../../utils/interface";
+import { groupBooksInThrees } from "../../utils/constants";
 
 export const Library = () => {
   const navigate = useNavigate();
@@ -13,118 +14,41 @@ export const Library = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetchBooks()
+    getBooks()
       .then((books) => setBooks(books))
       .catch((error) => console.error(error));
   }, []);
-
-  const booksInGroupsOfThree = Array.from(
-    { length: Math.ceil(books.length / 3) },
-    (_, index) => books.slice(index * 3, index * 3 + 3)
-  );
 
   const bookDetailsRoute = (bookId: number) => {
     navigate(`/book-details/${bookId}`);
   };
 
-  const Teste = () => {
-    return (
-      <>
+  const booksInGroupsOfThree = groupBooksInThrees(books);
+
+  return (
+    <PageLayout>
+      <Box sx={sxStyle.boxMain}>
+        <Typography sx={sxStyle.pageTitle}>Biblioteca</Typography>
         {booksInGroupsOfThree.map((group, groupIndex) => (
           <Box key={groupIndex} sx={sxStyle.books} display="flex">
             {group.map((book: IBook) => (
-              <CardRoot
-                key={book.id}
-                display="grid"
-                maxWidth="18rem"
-                flexDirection="column"
-              >
+              <CardRoot key={book.id} maxWidth="18rem" flexDirection="column">
                 <Box
                   component="img"
                   src={book.img}
                   sx={sxStyle.cover}
                   onClick={() => bookDetailsRoute(book.id)}
                 />
-                <Typography sx={sxStyle.title}>{book.title}</Typography>
+                <Box display={"grid"} width={"100%"}>
+                  <Typography sx={sxStyle.title}>{book.title}</Typography>
+                  <Typography sx={sxStyle.description}>
+                    {book.quantityRecyclablesNeeded} recicláveis
+                  </Typography>
+                </Box>
               </CardRoot>
             ))}
           </Box>
         ))}
-      </>
-    );
-  };
-
-  return (
-    <PageLayout>
-      <Box sx={sxStyle.boxMain}>
-        {Teste()}
-        {/* <Box sx={sxStyle.container}>
-          <CardRoot maxWidth="18rem" flexDirection="column">
-            <Typography sx={sxStyle.title}>10 - 20 recicláveis</Typography>
-            <Box sx={sxStyle.books}>
-              <Box
-                component="img"
-                src={cleanCode}
-                alt="Logo"
-                sx={sxStyle.logo}
-                onClick={() => navigate("/book-details")}
-              />
-              <Box
-                component="img"
-                src={cleanCode}
-                alt="Logo"
-                sx={sxStyle.logo}
-              />
-              <Box
-                component="img"
-                src={cleanCode}
-                alt="Logo"
-                sx={sxStyle.logo}
-              />
-            </Box>
-          </CardRoot>
-          <CardRoot maxWidth="18rem" flexDirection="column">
-            <Typography sx={sxStyle.title}>60 - 80 recicláveis</Typography>
-            <Box sx={sxStyle.books}>
-              <Box
-                component="img"
-                src={understandingAlgorithms}
-                alt="Logo"
-                sx={sxStyle.logo}
-              />
-              <Box
-                component="img"
-                src={understandingAlgorithms}
-                alt="Logo"
-                sx={sxStyle.logo}
-              />
-              <Box
-                component="img"
-                src={understandingAlgorithms}
-                alt="Logo"
-                sx={sxStyle.logo}
-              />
-            </Box>
-          </CardRoot>
-        </Box>
-        <Box sx={sxStyle.container}>
-          <CardRoot maxWidth="18rem" flexDirection="column">
-            <Typography sx={sxStyle.title}>30 - 50 recicláveis</Typography>
-            <Box sx={sxStyle.books}>
-              <Box component="img" src={DDD} alt="Logo" sx={sxStyle.logo} />
-              <Box component="img" src={DDD} alt="Logo" sx={sxStyle.logo} />
-              <Box component="img" src={DDD} alt="Logo" sx={sxStyle.logo} />
-            </Box>
-          </CardRoot>
-          <CardRoot maxWidth="18rem" flexDirection="column">
-            <Typography sx={sxStyle.title}>100 - 200+ recicláveis</Typography>
-            <Box sx={sxStyle.books}>
-              <Box component="img" src={python} alt="Logo" sx={sxStyle.logo} />
-              <Box component="img" src={python} alt="Logo" sx={sxStyle.logo} />
-              <Box component="img" src={python} alt="Logo" sx={sxStyle.logo} />
-            </Box>
-          </CardRoot>
-        </Box> */}
       </Box>
     </PageLayout>
   );

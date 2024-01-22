@@ -7,13 +7,19 @@ export const sxStyle = makeSxStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: "2rem",
+    gap: "1.25rem",
     flexDirection: "column",
+  },
+  pageTitle: {
+    fontSize: "2rem",
+    fontWeight: 700,
+    textAlign: "center",
+    color: colors.neutralLowDark,
   },
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "2rem",
+    gap: "1.25rem",
   },
   card: {
     width: "100%",
@@ -37,11 +43,15 @@ export const sxStyle = makeSxStyles({
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
   },
+  description: {
+    fontSize: "0.875rem",
+    color: colors.gray,
+  },
   books: {
     display: "flex",
     gap: "1.25rem",
     overflowX: "auto",
-    border: "1px solid red",
+    flexDirection: { xs: "column", md: "row" },
   },
   cover: {
     width: "100%",

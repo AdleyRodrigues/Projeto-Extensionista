@@ -19,8 +19,8 @@
       "title": "Código limpo: habilidades práticas do Agile software",
       "author": "Robert C. Martin",
       "pages": 425,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "10 a 20",
       "format": "PDF/Livro físico",
       "img": "src/assets/clean-code.png"
     },
@@ -29,110 +29,139 @@
       "title": "Algoritmos para viver: A ciência exata das decisões humanas",
       "author": "Brian Christian e Tom Griffiths",
       "pages": 400,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "10 a 20",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/algoritmos_para_viver.png"
     },
     {
       "id": "3",
       "title": "Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes",
       "author": "Gustavo Guanabara",
       "pages": 350,
-      "reading-age": "12+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "12+",
+      "quantityRecyclablesNeeded": "10 a 20",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/introducao_python.jpg"
     },
     {
       "id": "4",
       "title": "Algoritmos: Teoria e Prática",
       "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald Rivest, Clifford Stein",
       "pages": 1.322,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "30 a 50",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/algoritmos_teoria_e_pratica.png"
     },
     {
       "id": "5",
       "title": "Refatoração: Aperfeiçoando o Design de Códigos Existentes",
       "author": "Martin Fowler",
       "pages": 480,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "30 a 50",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/refatoracao.png"
     },
     {
       "id": "6",
       "title": "Domain-driven design: atacando as complexidades no coração do software",
       "author": "Eric Evans",
       "pages": 512,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "30 a 50",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/domain-drive-design.jpg"
     },
     {
       "id": "7",
       "title": "Arquitetura Limpa",
       "author": "Robert C. Martin",
       "pages": 368,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "60 a 80",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/arquitetura_limpa.png"
     },
     {
       "id": "8",
       "title": "O Programador Pragmático: De Aprendiz a Mestre",
       "author": "Dave Thomas e Andrew Hunt",
       "pages": 480,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "60 a 80",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/programador_pragmatico.png"
     },
     {
       "id": "9",
       "title": "Padrões de Projeto - Soluções Reutilizaveis de Software Orientado a Objetos",
       "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
       "pages": 496,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "60 a 80",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/padroes_de_projeto.png"
     },
     {
       "id": "10",
       "title": "Entendendo Algoritmos: Um guia ilustrado para programadores e outros curiosos",
       "author": "Aditya Y. Bhargava",
       "pages": 256,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "60 a 80",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/entendendo_algoritmos.png"
     },
     {
       "id": "11",
       "title": "The Mythical Man-Month",
       "author": "Fred Brooks",
       "pages": 384,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "100 - 200+",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/mythical_man.png"
     },
     {
       "id": "12",
       "title": "Use a Cabeça! Padrões de Projetos",
       "author": "Kathy Sierra e Bert Bates",
       "pages": 320,
-      "reading-age": "16+",
-      "quantity-recyclables-needed": "10 a 20",
+      "readingAge": "16+",
+      "quantityRecyclablesNeeded": "100 - 200+",
       "format": "Livro físico",
-      "img": "src/assets/clean-code.png"
+      "img": "src/assets/use_a_cabeca.png"
+    }
+  ],
+  "ranking": [
+    {
+      "id": "1",
+      "city": "Fortaleza",
+      "school": "Piamarta Aguanambi",
+      "class": "1º A",
+      "score": "2.350"
+    },
+    {
+      "id": "2",
+      "city": "Fortaleza",
+      "school": "Ari de Sá Cavalcante",
+      "class": "1º B",
+      "score": "2.350"
+    },
+    {
+      "id": "1",
+      "city": "Fortaleza",
+      "school": "Farias Brito",
+      "class": "1º A",
+      "score": "2.350"
+    },
+    {
+      "id": "1",
+      "city": "Fortaleza",
+      "class": "1º A",
+      "score": "2.350"
     }
   ]
 }

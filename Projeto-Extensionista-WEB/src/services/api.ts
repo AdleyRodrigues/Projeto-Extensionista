@@ -1,8 +1,8 @@
-import { formData } from "../utils/interface";
+import { IFilterData, IFormData } from "../utils/interface";
 
 const BASE_URL = "http://localhost:5000";
 
-export const createPost = (form: formData) => {
+export const createUser = (form: IFormData) => {
   fetch("http://localhost:5000/users", {
     method: "POST",
     headers: {
@@ -17,7 +17,7 @@ export const createPost = (form: formData) => {
     .catch((err) => console.log(err));
 };
 
-export const fetchBooks = async () => {
+export const getBooks = async () => {
   try {
     const response = await fetch(`${BASE_URL}/books`, {
       method: "GET",
@@ -33,7 +33,7 @@ export const fetchBooks = async () => {
   }
 };
 
-export const fetchBookById = async (id: number) => {
+export const getBookDetailsById = async (id: number) => {
   try {
     const response = await fetch(`${BASE_URL}/books/${id}`, {
       method: "GET",
@@ -41,7 +41,25 @@ export const fetchBookById = async (id: number) => {
         "Content-Type": "application/json",
       },
     });
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching book details:", error);
+    throw error;
+  }
+};
 
+export const getFilterById = async (filter: IFilterData) => {
+  try {
+    const response = await fetch(
+      `${BASE_URL}/ranking?city=${filter.city}&school=${filter.school}&class=${filter.class}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const data = await response.json();
     return data;
   } catch (error) {

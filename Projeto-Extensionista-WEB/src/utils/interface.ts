@@ -1,4 +1,4 @@
-export interface formData {
+export interface IFormData {
   fullName: string;
   birthDate: string;
   motherName: string;
@@ -10,6 +10,13 @@ export interface formData {
   password: string;
 }
 
+export interface IFilterData {
+  id: number;
+  city: string;
+  school: string;
+  class: string;
+}
+
 export interface IBook {
   id: number;
   title?: string;
@@ -19,4 +26,10 @@ export interface IBook {
   quantityRecyclablesNeeded?: string;
   format?: string;
   img?: string;
+}
+
+export interface BookInfoItem {
+  id: number;
+  subTile: string;
+  text: string | number;
 }

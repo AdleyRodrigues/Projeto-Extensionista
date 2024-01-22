@@ -4,7 +4,7 @@ import { colors } from "../../../config/theme";
 export const sxStyle = makeSxStyles({
   card: {
     width: "100%",
-    // display: "flex",
+    display: "flex",
     // maxWidth: "18rem",
     alignItems: "center",
     // flexDirection: "column",
