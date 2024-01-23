@@ -11,6 +11,30 @@
       "class": "2º A",
       "email": "lararoque2003@hotmail.com",
       "password": "Lovea1b2j3140803"
+    },
+    {
+      "id": "fa4b",
+      "fullName": "Aluno uninter",
+      "birthDate": "09/08/1999",
+      "motherName": "Maria de Jesus",
+      "city": "Fortaleza",
+      "birthState": "CE",
+      "school": "escola2",
+      "class": "3A",
+      "email": "alunouninter@gmail.com",
+      "password": "Batat@12doce"
+    },
+    {
+      "id": "8008",
+      "fullName": "Aluno da Uninter",
+      "birthDate": "09/08/1999",
+      "motherName": "Maria de Jesus",
+      "city": "Fortaleza",
+      "birthState": "CE",
+      "school": "escola3",
+      "class": "3A",
+      "email": "alunouninter@gmail.com",
+      "password": "Batat@12doce"
     }
   ],
   "books": [

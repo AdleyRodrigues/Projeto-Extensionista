@@ -10,7 +10,7 @@ export const sxStyle = makeSxStyles({
   },
   book: {
     width: "100%",
-    maxWidth: "15rem",
+    maxWidth: "1rem",
     height: "auto",
   },
   bookInfo: {
