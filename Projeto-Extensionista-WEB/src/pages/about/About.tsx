@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { PageLayout } from "../../components/PageLayout/PageLayout";
+import { Img } from "react-image";
 
 export const About = () => {
   return (
@@ -7,26 +8,41 @@ export const About = () => {
       <Box className="box-main">
         <Box className="content-container">
           <Typography variant="h4" className="content-title">
-            Projeto RecicLEIA
+            <h2>Projeto RecicLEIA</h2>
           </Typography>
           <br />
           <Typography variant="body1" className="content-text">
-            <strong>Apoios -</strong>
+            <h2>Apoio:</h2>
+            </Typography>
+            <Box component="img" src="src/assets/logo-uninter.png" alt="Logo Centro universitário Uninter" width="20%"/>
+        
+            
+          <br />
+          <Typography variant="h4" className="content-text">
+            <strong>Criadores:</strong>
+            </Typography>
+            
+            <Typography variant="body1" className="content-text">
+            
+            Adley Rodrigues
             <br />
-            ---
-          </Typography>
-          <br />
-          <Typography variant="body1" className="content-text">
-            <strong>Criadores -</strong>
+            Maysa Flores Cardoso 
             <br />
-            --- Elias José Galeazzi Maysa Flores Cardoso Adley Rodrigues
-          </Typography>
+            Elias José Galeazzi
+           
+            </Typography>
           <br />
-          <Typography variant="body1" className="content-text">
+          <Typography variant="h4" className="content-text">
             <strong>
-              Dúvidas? Contate sua escola ou nos envie um email:
-              recicleia@sac.com.br -
-            </strong>
+              Dúvidas? 
+              <br />
+              </strong>
+              </Typography>
+              <Typography variant="body1" className="content-text">
+            
+              Contate sua escola ou nos envie um email:
+              recicleia@sac.com.br 
+            
           </Typography>
         </Box>
       </Box>
